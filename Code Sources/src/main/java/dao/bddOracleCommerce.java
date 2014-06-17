@@ -1,4 +1,4 @@
-<?php
+package dao;
 
 public abstract class bddOracleCommerce() {
 
