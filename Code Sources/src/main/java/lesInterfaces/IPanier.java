@@ -1,12 +1,11 @@
-<?php
+package lesInterfaces;
 
 public interface IPanier{
-	public function AjouterProduit($leProuit);
-	public function SupprimerProduit($leProduit);
-	public function ViderPanier();
-	public function GetTotalPanier();
-	public function GetNbrProduit();
-	public function AfficherPanier();
-	public function RechercherProduit($idProduit);
+	public void AjouterProduit($leProuit);
+	public void SupprimerProduit($leProduit);
+	public void ViderPanier();
+	public void GetTotalPanier();
+	public void GetNbrProduit();
+	public void AfficherPanier();
+	public void RechercherProduit($idProduit);
 }
-?>

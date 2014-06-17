@@ -1,16 +1,8 @@
-/*
+package lesClasses;
 
-  @auteur frederic radigoy
-*/
+import lesInterfaces.IProduit;
 
-
-
-
-
-
-<?php
-
-    class Produit implements IProduit {
+public class Produit implements IProduit {
         
         protected $_id;
         
@@ -23,7 +15,7 @@
         protected $_prixProduit;
                 
                
-        function __construct($id, $nomProduit, $prixProduit, $cheminProduit, $description) {
+        public void __construct($id, $nomProduit, $prixProduit, $cheminProduit, $description) {
             
             $this->_id = $id;
             $this->_nomProduit = $nomProduit;
@@ -33,29 +25,29 @@
 
         }
 
-        public function getIdProduit(){
+        public void getIdProduit(){
         
         	return $_id;
         }
         
-        public function afficherProduit() {
+        public void afficherProduit() {
             return new Produit();
         }
 
 
-        public function getCheminImage() {
+        public void getCheminImage() {
             return $this->_cheminImage;
         }
 
 
-        public function getDescription() {
+        public void getDescription() {
             
             return $this->_descriptionProduit;
 
         }
 
 
-        public function getNomProduit() {
+        public void getNomProduit() {
             return $this->_nomProduit;
         }
 
@@ -65,5 +57,4 @@
             return $this->_prixProduit;
 
         }
-
 }

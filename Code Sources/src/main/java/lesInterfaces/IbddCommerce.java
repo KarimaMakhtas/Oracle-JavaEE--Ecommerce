@@ -1,8 +1,5 @@
-<?php
+package lesInterfaces;
 
-	require_once 'fonctions/IbddCommerce.php';
-
-	interface IbddCommerce {
+public interface IbddCommerce {
 
 	}
-?>

@@ -1,18 +1,11 @@
-<?php
+package lesInterfaces;
 
-
-
-/**
- * Description of IProduit
- *
- * @author frederic radigoy
- */
-interface IProduit {
+public interface IProduit {
     
-    public function afficherProduit($produit);
-    public function getNomProduit();
-    public function getPrixProduit();
-    public function getDescription();
-    public function getCheminImage();  
+    public void afficherProduit($produit);
+    public void getNomProduit();
+    public void getPrixProduit();
+    public void getDescription();
+    public void getCheminImage();  
     
 }

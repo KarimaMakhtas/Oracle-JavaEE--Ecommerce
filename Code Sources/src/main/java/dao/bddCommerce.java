@@ -1,8 +1,8 @@
-require_once 'fonctions/IbddCommerce.php';
+package dao;
 
-	class bddCommerce implements IbddCommerce {
+public class bddCommerce implements IbddCommerce {
 
-		public function __construct() {
+	public void __construct() {
 
 		}
 

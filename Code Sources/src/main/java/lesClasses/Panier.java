@@ -1,11 +1,12 @@
-<?php
-	require_once 'IPanier.php';
-	require_once 'IProduit.php';
-	
+package lesClasses;
+
+import lesInterfaces.IPanier;
+
+
 	public class Panier implements IPanier{
 		protected array $_mesProduits;
 		
-		public function __construct()
+		public void __construct()
 		{
 			$this->_mesProduits = new array();
 		}
@@ -17,7 +18,7 @@
 			$this->_mesProduits[$nouvelIndice] = $leProduit;
 		}
 		
-		public function SupprimerProduit($leProduit)
+		public void SupprimerProduit($leProduit)
 		{
 			$aTrouve = false;
 			$iProduit = 0;
@@ -40,7 +41,7 @@
 			}
 		}
 		
-		public function ViderPanier()
+		public void ViderPanier()
 		{
 			$this->_mesProduits = new array();
 		}
@@ -84,4 +85,3 @@
 			return $leProduitTrouve;
 		}
 	}
-?>

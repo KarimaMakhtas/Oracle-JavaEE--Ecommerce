@@ -23,7 +23,7 @@ public abstract class bddOracleCommerce() {
 	)
 	)";
 
-	public function seConnecter() {
+	public void seConnecter() {
 
 		try
 		{
@@ -36,25 +36,25 @@ public abstract class bddOracleCommerce() {
 		}
 	}
 
-	public function seDeconnecter() {
+	public void seDeconnecter() {
 		$reponse->closeCursor();
 		oci_close(connexion);
 	}
 	
 
-	public function __construct() {
+	public void __construct() {
 
 	}
 
-	public function ajouterParametre($nomDuParametre, $valeurDuParametre) {
+	public void ajouterParametre($nomDuParametre, $valeurDuParametre) {
 		oci_bind_by_name($command, ':p1', $p1);
 	}
 
-	public function definirProcedure($uneChaine) {
+	public void definirProcedure($uneChaine) {
 		$command = oci_parse($connexion, $uneChaine);
 	}
 
-	private function executerUneCommande() {
+	private void executerUneCommande() {
 		return oci_execute($command);
 	}
 
@@ -66,10 +66,10 @@ public abstract class bddOracleCommerce() {
 
 	'SELECT id, Reference, prixTotal, refClient, refMoyenPaiement, refExpediteur, refAdresseLivraison, refAdresseFacturation, annulee FROM Commande';
 
-	public function seConnecter();
-	public function seDecnnecter();
+	public void seConnecter();
+	public void seDecnnecter();
 
-	public function listeDeProduit() {
+	public void listeDeProduit() {
 		seConnecter();
 		definirProcedure('begin listeDeProduits(); end;');
 		executerUneCommande();
@@ -77,51 +77,51 @@ public abstract class bddOracleCommerce() {
 		seDecnnecter();
 	}
 
-	public function getProduit() {
+	public void getProduit() {
 		return $produit;
 	}
 
-	public function setProduits() {
+	public void setProduits() {
 		$this->produit = $produit;
 	}
 
 
 
-	public function getClient() {
+	public void getClient() {
 		return $this->client;
 	}
 
-	public function setClient($Client client) {
+	public void setClient($Client client) {
 		$this->client = $client;
 	}
 
 
 
-	public function getUtilisateur() {
+	public void getUtilisateur() {
 		return $this->utilisateur;
 	}
 
-	public function setUtilsateur($Utilisateur utilisateur) {
+	public void setUtilsateur($Utilisateur utilisateur) {
 		$this->utilisateur = $utilisateur;
 	}
 
 
 
-	public function getAdministrateur() {
+	public void getAdministrateur() {
 		return $this->Administrateur;
 	}
 
-	public function setAdministrateur($Administrateur Administrateur) {
+	public void setAdministrateur($Administrateur Administrateur) {
 		$this->Administrateur = $Administrateur;
 	}
 
 
 
-	public function getCommande() {
+	public void getCommande() {
 		return $this->Commande;
 	}
 
-	public function setCommande($Commande Commande) {
+	public void setCommande($Commande Commande) {
 		$this->Commande = $Commande;
 	}
 }
