@@ -356,6 +356,9 @@
       </general>
     </ddl-file-settings>
   </component>
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
   <component name="IdProvider" IDEtalkID="6C06AE9B7FA9C4D726CE2283063147FA" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
