@@ -5,12 +5,11 @@ package lesInterfaces;
  *
  * @author frederic radigoy
  */
-public interface IProduit {
-    
-    public String afficherProduit();
-    public IProduit getNomProduit();
+public interface IProduit extends ITemplate {
+    public String getNomProduit();
     public double getPrixProduit();
     public String getDescription();
-    public IImage getCheminImage();
+    public String getCheminImage();
+    public IImage getImage();
     public String getId();
 }

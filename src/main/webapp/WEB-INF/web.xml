@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>IndexSerlet</servlet-name>
+  	<display-name>IndexSerlet</display-name>
+  	<description></description>
+  	<servlet-class>lesServlets.IndexSerlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>IndexSerlet</servlet-name>
+  	<url-pattern>/IndexSerlet</url-pattern>
+  </servlet-mapping>
 </web-app>
