@@ -156,6 +156,18 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+				<!-- le plugin pour démarrer TomEE depuis la ligne de commande avec maven : 
+				       mvn package tomee:start
+				-->
+				<groupId>org.apache.openejb.maven</groupId>
+				<artifactId>tomee-maven-plugin</artifactId>
+				<version>1.0.1</version>
+				<configuration>
+					<tomeeVersion>1.6.0</tomeeVersion>
+					<tomeeClassifier>plus</tomeeClassifier>
+				</configuration>
+			</plugin>
         </plugins>
     </build>
          <reporting>
@@ -189,18 +201,7 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>dashboard-maven-plugin</artifactId>
             </plugin-->
-			<plugin>
-				<!-- le plugin pour démarrer TomEE depuis la ligne de commande avec maven : 
-				       mvn package tomee:start
-				-->
-				<groupId>org.apache.openejb.maven</groupId>
-				<artifactId>tomee-maven-plugin</artifactId>
-				<version>1.0.1</version>
-				<configuration>
-					<tomeeVersion>1.6.0</tomeeVersion>
-					<tomeeClassifier>plus</tomeeClassifier>
-				</configuration>
-			</plugin>
+
         </plugins>
     </reporting>
  </project>
