@@ -11,5 +11,5 @@ public interface IProduit extends ITemplate {
     public String getDescription();
     public String getCheminImage();
     public IImage getImage();
-    public String getId();
+    public Long getId();
 }

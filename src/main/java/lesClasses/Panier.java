@@ -60,7 +60,7 @@ public class Panier implements IPanier{
 	}
 
 	@Override
-	public IProduit RechercherProduit(String idProduit) {
+	public IProduit RechercherProduit(Long idProduit) {
 		boolean aTrouve = false;
 		IProduit leProduitTrouve = null;
 		int iProduit = 0;

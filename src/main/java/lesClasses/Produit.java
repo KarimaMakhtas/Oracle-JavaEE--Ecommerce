@@ -1,5 +1,12 @@
 package lesClasses;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import lesInterfaces.IImage;
 import lesInterfaces.IProduit;
 
@@ -8,31 +15,29 @@ import lesInterfaces.IProduit;
   @auteur frederic radigoy
 */
 
+@Entity
 public class Produit implements IProduit {
-    
-    protected String _id;
-    
+	
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    protected Long _id;
+
     protected String _nomProduit;
     
     protected IImage _monImage;
-    
+
     protected String _descriptionProduit;
-    
+
     protected double _prixProduit;
             
            
-    public Produit(String id, String nomProduit, double prixProduit, IImage uneImage, String description)
+    public Produit(Long id, String nomProduit, double prixProduit, IImage uneImage, String description)
     {
         _id = id;
         _nomProduit = nomProduit;
         _prixProduit = prixProduit;
         _monImage = uneImage;
         _descriptionProduit = description;
-    }
-
-    public String getIdProduit(){
-    
-    	return _id;
     }
 
     @Override
@@ -68,7 +73,7 @@ public class Produit implements IProduit {
 	}
 
 	@Override
-	public String getId() {
+	public Long getId() {
 		return _id;
 	}
 }

@@ -7,7 +7,7 @@
   <persistence-unit name="monUniteDePersistance">
     <!-- la liste des noms complets des classes représentant 
          les entités gérées par cette unité de persistance  -->
-    <class>ma.classe.Entite</class>
+    <class>lesClasses.Client</class>
     <properties>
       <!-- une propriété de configuration propre à l'implémentation de JPA -->
       <property name="une propriété" value="une valeur" />

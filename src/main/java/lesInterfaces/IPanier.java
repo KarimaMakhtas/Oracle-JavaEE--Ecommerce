@@ -8,5 +8,5 @@ public interface IPanier{
 	public double GetTotalPanier();
 	public int GetNbrProduit();
 	public String AfficherPanier();
-	public IProduit RechercherProduit(String idProduit);
+	public IProduit RechercherProduit(Long idProduit);
 }

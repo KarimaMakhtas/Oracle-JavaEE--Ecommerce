@@ -11,8 +11,24 @@
 	<!-- précisez le nom et l'email de chaque membre de votre groupe -->
 	<developers>
 		<developer>
-			<name>David Gayerie</name>
-			<email>david.gayerie.epsi@mailoo.org</email>
+			<name>MORATINOS-MINKANDE Yann Cédric</name>
+			<email>moratinos.c@gmail.com</email>
+		</developer>
+		<developer>
+			<name>RADIGOY Frédéric</name>
+			<email>frederic.radigoy@gmail.com</email>
+		</developer>
+		<developer>
+			<name>FERRAND Florent</name>
+			<email>florent.ferrand@gmail.com</email>
+		</developer>
+		<developer>
+			<name>MAKHTAS Karima</name>
+			<email>karima.makhtas@gmail.com</email>
+		</developer>
+		<developer>
+			<name>DINGALT Loyd</name>
+			<email>ldngalt@gmail.com</email>
 		</developer>
 	</developers>
 	<properties>
@@ -30,12 +46,20 @@
 			<!-- le scope provided indique que cette dépendance sera fournie pour le serveur à l'exécution -->
 			<scope>provided</scope>
 		</dependency>
+		<!-- dépendance openjpa pour faire de la persistance des entitées  -->
+		<dependency>
+			<groupId>org.apache.openjpa</groupId>
+			<artifactId>openjpa-persistence-jdbc</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+		<!-- dépendance des tests junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- dépendance driver oracle -->
 		<dependency>
 		    <groupId>com.oracle</groupId>
 		    <artifactId>ojdbc6</artifactId>
